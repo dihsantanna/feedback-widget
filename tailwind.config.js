@@ -6,6 +6,9 @@ module.exports = {
         lemonade: {
           400: "#6DFF7C",
           500: "#57E55D",
+        },
+        grafite: {
+          500: "#09090A"
         }
       }
     },
