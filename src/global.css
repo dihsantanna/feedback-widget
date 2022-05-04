@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-grafite-500 text-zinc-100;
+}
+
 .widget-container {
   @apply absolute bottom-4 right-4;
 }
