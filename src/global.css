@@ -7,7 +7,7 @@ body {
 }
 
 .widget-container {
-  @apply absolute bottom-4 right-4;
+  @apply absolute bottom-4 right-4 md:bottom-8 md:right-10 flex flex-col items-end;
 }
 
 .button-chat {
@@ -20,4 +20,20 @@ body {
 
 .feedback {
   @apply max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-700 ease-linear;
+}
+
+.wg-form-container {
+  @apply bg-zinc-900 p-4 relative rounded-2xl mb-4 flex flex-col items-center shadow-lg w-[calc(100vw-2rem)] md:w-auto;
+}
+
+.wg-header {
+  @apply text-xl leading-6;
+}
+
+.wg-footer {
+  @apply text-xs text-neutral-400;
+}
+
+.wg-footer a {
+  @apply underline underline-offset-2;
 }

@@ -1,11 +1,12 @@
 import React from 'react'
 import { ChatTeardropDots } from 'phosphor-react';
 import { Popover } from '@headlessui/react';
+import WidgetForm from './WidgetForm';
 
 export default function Widget() {
   return (
     <Popover className="widget-container">
-      <Popover.Panel>Hello World</Popover.Panel>
+      <Popover.Panel><WidgetForm /></Popover.Panel>
       <Popover.Button className="button-chat group">
         <ChatTeardropDots className="icon-chat" />
         <span className="feedback">
