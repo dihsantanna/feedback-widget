@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.widget-container {
+  @apply absolute bottom-4 right-4;
+}
+
+.button-chat {
+  @apply bg-lemonade-500 rounded-full px-3 h-12 text-white flex items-center;
+}
+
+.icon-chat {
+  @apply w-6 h-6;
+}
+
+.feedback {
+  @apply max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-700 ease-linear;
+}
