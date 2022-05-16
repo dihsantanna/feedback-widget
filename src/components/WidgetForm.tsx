@@ -1,4 +1,5 @@
 import React from 'react'
+import './WidgetForm.css';
 
 export default function WidgetForm() {
   return (

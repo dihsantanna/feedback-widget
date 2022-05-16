@@ -2,6 +2,7 @@ import React from 'react'
 import { ChatTeardropDots } from 'phosphor-react';
 import { Popover } from '@headlessui/react';
 import WidgetForm from './WidgetForm';
+import './Widget.css';
 
 export default function Widget() {
   return (
