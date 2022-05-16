@@ -5,3 +5,51 @@
 body {
   @apply bg-grafite-500 text-zinc-100;
 }
+
+.widget-container {
+  @apply absolute bottom-4 right-4 md:bottom-8 md:right-10 flex flex-col items-end;
+}
+
+.button-chat {
+  @apply bg-lemonade-500 rounded-full px-3 h-12 text-white flex items-center;
+}
+
+.icon-chat {
+  @apply w-6 h-6;
+}
+
+.feedback {
+  @apply max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-700 ease-linear;
+}
+
+.wg-form-container {
+  @apply bg-zinc-900 p-4 relative rounded-2xl mb-4 flex flex-col items-center shadow-lg w-[calc(100vw-2rem)] md:w-auto;
+}
+
+.wg-header {
+  @apply text-xl leading-6;
+}
+
+.wg-form {
+  @apply flex py-8 gap-2 w-full
+}
+
+.btn-feedback-types {
+  @apply bg-zinc-800 rounded-lg py-5 w-24 flex-1 flex flex-col items-center gap-2 border-2 border-transparent hover:border-lemonade-500 focus:border-lemonade-500 focus:outline-none;
+}
+
+.wg-footer {
+  @apply text-xs text-neutral-400;
+}
+
+.wg-footer a {
+  @apply underline underline-offset-2;
+}
+
+.cl-btn {
+  @apply top-5 right-5 absolute text-zinc-400 hover:text-zinc-100;
+}
+
+.x-btn {
+  @apply w-4 h-4;
+}

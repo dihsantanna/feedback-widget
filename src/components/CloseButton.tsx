@@ -1,6 +1,5 @@
 import React from 'react'
 import  { Popover } from '@headlessui/react';
-import './CloseButton.css';
 import { X } from 'phosphor-react';
 
 export default function CloseButton() {
