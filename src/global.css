@@ -53,3 +53,15 @@ body {
 .x-btn {
   @apply w-4 h-4;
 }
+
+.title-content {
+  @apply flex items-center gap-2;
+}
+
+.img-content-title {
+  @apply w-6 h-6;
+}
+
+.arrow-left {
+  @apply top-5 left-5 absolute text-zinc-400 hover:text-zinc-100;
+}
