@@ -1,0 +1,7 @@
+.cl-btn {
+  @apply top-5 right-5 absolute text-zinc-400 hover:text-zinc-100;
+}
+
+.x-btn {
+  @apply w-4 h-4;
+}
