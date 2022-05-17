@@ -1,7 +1,8 @@
 import { ArrowLeft } from 'phosphor-react';
-import React from 'react';
+import React, { FormEvent, useState } from 'react';
 import { FeedbackType, feedbackTypes } from '../../../utils/feedbackTypes';
 import CloseButton from '../../CloseButton';
+import ScreenshotButton from '../ScreenshotButton';
 
 interface FeedbackContentStepProp {
   feedbackType: FeedbackType,
@@ -11,7 +12,22 @@ interface FeedbackContentStepProp {
 export default function FeedbackContentStep(
   { feedbackType, restartFeedback }: FeedbackContentStepProp
   ) {
+  const [screenshot, setScreenshot] = useState<string | null>(null);
+  const [comment, setComment] = useState<string>('');
+
   const feedbackTypeInfo = feedbackTypes[feedbackType];
+
+  const handleSubmitFeedback = (e: FormEvent) => {
+    e.preventDefault();
+    alert(JSON.stringify(
+      {
+        screenshot,
+        comment
+      }
+    ));
+    setScreenshot(null);
+    setComment('');
+  }
 
   return (
     <>
@@ -32,9 +48,27 @@ export default function FeedbackContentStep(
         </span>
         <CloseButton />
     </header>
-    <div className="wg-form">
-      
-    </div>
+    <form onSubmit={  handleSubmitFeedback }>
+      <textarea
+        className="scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin"
+        placeholder="Conte com detalhes o que está acontecendo..."
+        onChange={ ({ target }) => setComment(target.value) }
+        value={ comment }
+      />
+      <footer>
+        <ScreenshotButton
+          screenshotTook={ setScreenshot }
+          screenshot={ screenshot }
+        />
+        <button
+        disabled={ !comment }
+        type="submit"
+        className="btn-submit text-shadow-xl"
+        >
+          Enviar feedback
+        </button>
+      </footer>
+    </form>
     </>
   )
 }

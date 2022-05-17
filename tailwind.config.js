@@ -10,8 +10,18 @@ module.exports = {
         grafite: {
           500: "#09090A"
         }
-      }
+      },
+      borderRadius: {
+        md: '4px',
+      },
+      textShadow: {
+        '2xl': '0 0 1px #09090A, 0 0 3px #09090A',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('tailwind-scrollbar'),
+    require('tailwindcss-textshadow'),
+  ],
 }
